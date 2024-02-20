@@ -9,9 +9,15 @@ export const useStore = defineStore("portfolioStore", {
   },
   getters: {
     modeClass: (state) => {
-      return {
-        "dark-mode": state.mode === "dark",
-      };
+      if (state.mode === "dark") {
+        return {
+          "dark-mode": true,
+        };
+      } else {
+        return {
+          "light-mode": true,
+        };
+      }
     },
   },
   actions: {

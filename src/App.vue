@@ -1,5 +1,7 @@
 <template>
   <TheHeader></TheHeader>
+  <div class="test"></div>
+  <div id="contact" class="test-2">scroll to me</div>
 </template>
 
 <script setup>
@@ -13,14 +15,18 @@ import TheHeader from "./components/TheHeader.vue";
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --light-color: white;
   --dark-color: #2a3439;
-  --accent-color: #74c365;
+  --accent-color: #007fff;
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -36,5 +42,14 @@ import TheHeader from "./components/TheHeader.vue";
 .dark-mode {
   color: var(--light-color);
   background: var(--dark-color);
+}
+
+/* Test div */
+.test {
+  height: 200vh;
+}
+
+.test-2 {
+  height: 100vh;
 }
 </style>

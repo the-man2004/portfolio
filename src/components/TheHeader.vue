@@ -1,27 +1,33 @@
 <template>
   <header :class="store.modeClass">
-    <div>
-      <a href="#" class="home-link">
-        <img class="header-profile" src="../assets/github-profile.jpg" alt="" />
-        <span>HEINRICH BASSON</span>
-      </a>
-    </div>
-    <div>
-      <ul class="nav-links">
-        <li>
-          <a href="#">ABOUT</a>
-        </li>
-        <li>
-          <a href="#">PROJECTS</a>
-        </li>
-        <li>
-          <a href="#">CONTACT</a>
-        </li>
-        <li>
-          <button @click="store.toggleMode">MODE</button>
-        </li>
-      </ul>
-    </div>
+    <nav>
+      <div>
+        <a href="#hero" class="home-link">
+          <img
+            class="header-profile"
+            src="../assets/profile-removebg.png"
+            alt=""
+          />
+          <span>HEINRICH BASSON</span>
+        </a>
+      </div>
+      <div>
+        <ul class="nav-links">
+          <li>
+            <a href="#about">ABOUT</a>
+          </li>
+          <li>
+            <a href="#projects">PROJECTS</a>
+          </li>
+          <li>
+            <a href="#contact">CONTACT</a>
+          </li>
+          <li>
+            <button @click="store.toggleMode">MODE</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
 </template>
 
@@ -35,12 +41,20 @@ const store = useStore();
 header {
   padding: 10px 30px;
 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  box-shadow: 1px 1px 7.5px var(--dark-color);
+  transition: background-color 250ms ease;
+  z-index: 10;
+}
+
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  box-shadow: 1px 1px 7.5px var(--dark-color);
-  transition: all 250ms ease;
 }
 
 a {
@@ -66,6 +80,7 @@ a:focus {
   width: 50px;
   height: auto;
   border-radius: 100px;
+  background: var(--accent-color);
 }
 
 .nav-links {
