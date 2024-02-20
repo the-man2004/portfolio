@@ -25,7 +25,7 @@ span {
   border: 2px solid var(--dark-color);
   border-radius: 100px;
   background: var(--light-color);
-  transition: margin 250ms ease;
+  transition: all 250ms ease;
 }
 
 .dark-btn {
@@ -42,7 +42,7 @@ span {
   color: var(--dark-color);
 }
 .light-btn span {
-  margin-left: auto;
+  transform: translateX(25px);
   border-color: var(--light-color);
   background: var(--dark-color);
 }
