@@ -1,6 +1,9 @@
 <template>
   <div @click="toggleDropdown" class="burger-wrapper">
-    <div class="burger" :class="store.oppositeModeClass"></div>
+    <div
+      class="burger"
+      :class="[store.oppositeModeClass, isDropdownOpen === true ? 'cross' : '']"
+    ></div>
   </div>
   <transition>
     <div
@@ -38,10 +41,12 @@ const toggleDropdown = () => {
   align-items: center;
   height: 30px;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .burger {
   position: relative;
+  display: block;
   height: 3px;
   width: 30px;
   transition: background-color 250ms ease;
@@ -54,6 +59,7 @@ const toggleDropdown = () => {
   height: 3px;
   width: 30px;
   background: inherit;
+  transition: all 250ms ease;
 }
 
 .burger::before {
@@ -62,6 +68,21 @@ const toggleDropdown = () => {
 
 .burger::after {
   top: -10px;
+}
+
+.cross {
+  transform: translateX(-30px);
+}
+
+.cross::before,
+.cross::after {
+  display: block;
+}
+.cross::before {
+  transform: translateX(30px) translateY(-10px) rotate(45deg);
+}
+.cross::after {
+  transform: translateX(30px) translateY(10px) rotate(-45deg);
 }
 
 /* Dropdown classes */
