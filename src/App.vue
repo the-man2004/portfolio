@@ -47,9 +47,11 @@ html {
 /* Test div */
 .test {
   height: 200vh;
+  background: gray;
 }
 
 .test-2 {
   height: 100vh;
+  background: gray;
 }
 </style>

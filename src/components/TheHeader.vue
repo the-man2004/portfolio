@@ -1,32 +1,29 @@
 <template>
   <header :class="store.modeClass">
     <nav>
-      <div>
-        <a href="#hero" class="home-link">
-          <img
-            class="header-profile"
-            src="../assets/profile-removebg.png"
-            alt=""
-          />
-          <span>HEINRICH BASSON</span>
-        </a>
-      </div>
-      <div>
-        <ul class="nav-links">
-          <li>
-            <a href="#about">ABOUT</a>
-          </li>
-          <li>
-            <a href="#projects">PROJECTS</a>
-          </li>
-          <li>
-            <a href="#contact">CONTACT</a>
-          </li>
-          <li>
-            <ModeSwitch></ModeSwitch>
-          </li>
-        </ul>
-      </div>
+      <a href="#hero" class="home-link">
+        <img
+          class="header-profile"
+          src="../assets/profile-removebg.png"
+          alt=""
+        />
+        <span>HEINRICH BASSON</span>
+      </a>
+      <ul class="nav-links">
+        <li>
+          <a href="#about">ABOUT</a>
+        </li>
+        <li>
+          <a href="#projects">PROJECTS</a>
+        </li>
+        <li>
+          <a href="#contact">CONTACT</a>
+        </li>
+        <li>
+          <ModeSwitch></ModeSwitch>
+        </li>
+      </ul>
+      <TheDropdown></TheDropdown>
     </nav>
   </header>
 </template>
@@ -34,6 +31,7 @@
 <script setup>
 import { useStore } from "@/store";
 import ModeSwitch from "./Header/ModeSwitch.vue";
+import TheDropdown from "./Header/TheDropdown.vue";
 
 const store = useStore();
 </script>
@@ -47,7 +45,6 @@ header {
   left: 0;
   right: 0;
 
-  box-shadow: 1px 1px 7.5px var(--dark-color);
   transition: background-color 250ms ease;
   z-index: 10;
 }
@@ -85,10 +82,16 @@ a:focus {
 }
 
 .nav-links {
-  display: flex;
-  gap: 30px;
+  display: none;
 }
 .nav-links li {
   list-style: none;
+}
+
+@media (min-width: 750px) {
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
 }
 </style>
