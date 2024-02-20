@@ -1,15 +1,9 @@
 <template>
-  <div :class="store.modeClass">
-    <h1 class="accent">{{ store.hello }}</h1>
-    <p>{{ store.mode }}</p>
-    <button @click="store.toggleMode">click me</button>
-  </div>
+  <TheHeader></TheHeader>
 </template>
 
 <script setup>
-import { useStore } from "./store/index";
-
-const store = useStore();
+import TheHeader from "./components/TheHeader.vue";
 </script>
 
 <style>
