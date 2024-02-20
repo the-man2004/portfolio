@@ -23,7 +23,7 @@
             <a href="#contact">CONTACT</a>
           </li>
           <li>
-            <button @click="store.toggleMode">MODE</button>
+            <ModeSwitch></ModeSwitch>
           </li>
         </ul>
       </div>
@@ -33,6 +33,7 @@
 
 <script setup>
 import { useStore } from "@/store";
+import ModeSwitch from "./Header/ModeSwitch.vue";
 
 const store = useStore();
 </script>
