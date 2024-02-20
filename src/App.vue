@@ -1,8 +1,12 @@
 <template>
-  <h1>Hello World!</h1>
+  <h1>{{ store.hello }}</h1>
 </template>
 
-<script setup></script>
+<script setup>
+import { useStore } from "./store/index";
+
+const store = useStore();
+</script>
 
 <style>
 #app {
