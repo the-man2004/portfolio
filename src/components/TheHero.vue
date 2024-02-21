@@ -1,5 +1,5 @@
 <template>
-  <section id="hero" :class="store.modeClass">
+  <section id="hero" :class="store.heroClass">
     <h1>HEY, I'M HEINRICH BASSON!</h1>
     <p>
       I'm a <span class="highlighted-txt">Front-end</span> focused
@@ -26,6 +26,12 @@ const store = useStore();
   flex-direction: column;
   height: 100vh;
   min-height: 650px;
+
+  background-image: url("../assets/marble.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   transition: background-color 250ms ease;
 }
 
@@ -34,6 +40,7 @@ const store = useStore();
   font-size: 2.5rem;
   text-align: center;
   line-height: 120%;
+  z-index: 5;
 }
 
 #hero p {
@@ -43,6 +50,7 @@ const store = useStore();
   text-align: center;
   line-height: 120%;
   max-width: 750px;
+  z-index: 5;
 }
 
 #hero .highlighted-txt {
@@ -59,6 +67,7 @@ const store = useStore();
   background: var(--accent-color);
   color: var(--light-color);
 
+  z-index: 5;
   transition: all 250ms ease;
 }
 #hero #hero-about-link:hover,
@@ -67,13 +76,38 @@ const store = useStore();
   transform: translateY(-2.5px);
 }
 
+/* Mode classes */
+.dark-hero {
+  color: var(--light-color);
+  background: var(--dark-color);
+}
+.light-hero {
+  color: var(--dark-color);
+  background: var(--light-color);
+}
+
+.dark-hero::after,
+.light-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  transition: background-color 250ms ease;
+}
+.dark-hero::after {
+  background: rgb(42, 52, 57, 0.97);
+}
+.light-hero::after {
+  background: rgba(255, 255, 255, 0.88);
+}
+
 @media (min-width: 750px) {
   #hero h1 {
     font-size: 4rem;
   }
 
   #hero p {
-    margin: 45px 30px;
     font-size: 1.5rem;
   }
 
