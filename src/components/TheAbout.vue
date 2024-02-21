@@ -54,7 +54,7 @@ const store = useStore();
 #about {
   scroll-margin: 68.69px;
   padding: 60px 30px;
-  min-height: 100vh;
+  min-height: calc(100vh - 68.69px);
 
   transition: background-color 250ms ease;
 }
@@ -98,6 +98,9 @@ const store = useStore();
 }
 #about-me p:nth-child(3) {
   margin-bottom: 45px;
+}
+#about-me p a {
+  color: var(--accent-color);
 }
 
 #contact-link {

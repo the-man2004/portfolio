@@ -23,7 +23,6 @@ a {
 a:hover,
 a:focus {
   box-shadow: 1px 1px 15px var(--dark-color);
-  transform: translateY(-2.5px);
 }
 
 @media (min-width: 750px) {
