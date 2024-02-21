@@ -3,8 +3,7 @@
     <div>
       <h2>ABOUT ME</h2>
       <p id="intro">
-        Here you can find out more about me, what I can do, my skills, as well
-        as my interests.
+        Here you can find out more about me, what I can do, and my skills.
       </p>
     </div>
     <div id="about-and-skills">
