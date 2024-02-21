@@ -54,7 +54,7 @@ const store = useStore();
 #about {
   scroll-margin: 68.69px;
   padding: 60px 30px;
-  min-height: calc(100vh - 68.69px);
+  /* min-height: calc(100vh - 68.69px); */
 
   transition: background-color 250ms ease;
 }
