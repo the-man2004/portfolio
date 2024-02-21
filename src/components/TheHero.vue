@@ -1,14 +1,16 @@
 <template>
   <section id="hero" :class="store.heroClass">
-    <h1>HEY, I'M HEINRICH BASSON!</h1>
-    <p>
-      I'm a <span class="highlighted-txt">Front-end</span> focused
-      <span class="highlighted-txt">Web Developer</span> building the
-      <span class="highlighted-txt">Front-end</span> of Websites and Web
-      Applications that leads to the overall
-      <span class="highlighted-txt">success</span> of the product
-    </p>
-    <a href="#about" id="hero-about-link">ABOUT ME</a>
+    <div id="hero-intro">
+      <h1>HEY, I'M HEINRICH BASSON!</h1>
+      <p>
+        I'm a <span class="highlighted-txt">Front-end</span> focused
+        <span class="highlighted-txt">Web Developer</span> building the
+        <span class="highlighted-txt">Front-end</span> of Websites and Web
+        Applications that leads to the overall
+        <span class="highlighted-txt">success</span> of the product
+      </p>
+      <a href="#about" id="hero-about-link">ABOUT ME</a>
+    </div>
   </section>
 </template>
 
@@ -35,12 +37,19 @@ const store = useStore();
   transition: background-color 250ms ease;
 }
 
+#hero #hero-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 5;
+}
+
 #hero h1 {
   margin: 0 30px;
   font-size: 2.5rem;
   text-align: center;
   line-height: 120%;
-  z-index: 5;
 }
 
 #hero p {
@@ -50,7 +59,6 @@ const store = useStore();
   text-align: center;
   line-height: 120%;
   max-width: 750px;
-  z-index: 5;
 }
 
 #hero .highlighted-txt {
@@ -67,7 +75,6 @@ const store = useStore();
   background: var(--accent-color);
   color: var(--light-color);
 
-  z-index: 5;
   transition: all 250ms ease;
 }
 #hero #hero-about-link:hover,
