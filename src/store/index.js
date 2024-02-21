@@ -16,6 +16,8 @@ export const useStore = defineStore("portfolioStore", {
       state.mode === "dark" ? { "dark-btn": true } : { "light-btn": true },
     heroClass: (state) =>
       state.mode === "dark" ? { "dark-hero": true } : { "light-hero": true },
+    skillsClass: (state) =>
+      state.mode === "dark" ? { "dark-skill": true } : { "light-skill": true },
   },
   actions: {
     toggleMode() {

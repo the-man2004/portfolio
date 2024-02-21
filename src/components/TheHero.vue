@@ -9,13 +9,14 @@
         Applications that leads to the overall
         <span class="highlighted-txt">success</span> of the product
       </p>
-      <a href="#about" id="hero-about-link">ABOUT ME</a>
+      <NavigationBtn :link="'#about'">ABOUT ME</NavigationBtn>
     </div>
   </section>
 </template>
 
 <script setup>
 import { useStore } from "@/store";
+import NavigationBtn from "./HelperComponents/NavigationBtn.vue";
 
 const store = useStore();
 </script>

@@ -1,6 +1,7 @@
 <template>
   <TheHeader></TheHeader>
   <TheHero></TheHero>
+  <TheAbout></TheAbout>
   <div class="test"></div>
   <div id="contact" class="test-2">scroll to me</div>
 </template>
@@ -8,6 +9,7 @@
 <script setup>
 import TheHeader from "./components/TheHeader.vue";
 import TheHero from "./components/TheHero.vue";
+import TheAbout from "./components/TheAbout.vue";
 </script>
 
 <style>
@@ -25,6 +27,8 @@ html {
   --light-color: white;
   --dark-color: #2a3439;
   --accent-color: #007fff;
+  --light-gray-color: rgb(228, 228, 228);
+  --dark-gray-color: rgb(46, 58, 63);
 }
 
 #app {
