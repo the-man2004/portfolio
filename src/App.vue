@@ -1,11 +1,13 @@
 <template>
   <TheHeader></TheHeader>
+  <TheHero></TheHero>
   <div class="test"></div>
   <div id="contact" class="test-2">scroll to me</div>
 </template>
 
 <script setup>
 import TheHeader from "./components/TheHeader.vue";
+import TheHero from "./components/TheHero.vue";
 </script>
 
 <style>

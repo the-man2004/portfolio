@@ -4,7 +4,7 @@ export const useStore = defineStore("portfolioStore", {
   state: () => {
     return {
       hello: "Hey!",
-      mode: "dark",
+      mode: "light",
     };
   },
   getters: {
