@@ -1,5 +1,5 @@
 <template>
-  <section id="projects" :class="store.grayClass">
+  <section id="projects" :class="store.modeClass">
     <div>
       <h2>PROJECTS</h2>
       <p id="intro">
@@ -10,44 +10,43 @@
       <ul>
         <!-- Free-2-Play -->
         <li :class="store.modeClass" class="project-item">
-          <div class="project-item-info">
-            <h3>Free-2-Play</h3>
-            <p>Information about free to play PC and Browser games</p>
-          </div>
-
-          <img src="../assets/ProjectThumbnails/free-2-play.png" alt="" />
+          <img
+            src="../assets/ProjectThumbnails/free-2-play-monitor.png"
+            alt=""
+          />
+          <h3>Free-2-Play</h3>
+          <p>Information about free to play PC and Browser games</p>
         </li>
         <!-- Sudoki -->
         <li :class="store.modeClass" class="project-item">
-          <div class="project-item-info">
-            <h3>Sudoki</h3>
-            <p>A puzzle game based on the classic Japanese game Sudoku</p>
-          </div>
-
-          <img src="../assets/ProjectThumbnails/sudoki.png" alt="" />
+          <img src="../assets/ProjectThumbnails/sudoki-monitor.png" alt="" />
+          <h3>Sudoki</h3>
+          <p>A puzzle game based on the classic Japanese game Sudoku</p>
         </li>
         <!-- Delicious foods -->
         <li :class="store.modeClass" class="project-item">
-          <div class="project-item-info">
-            <h3>Delicious Foods</h3>
-            <p>
-              A place to find Delicious recipes ranging from Dessert to Starter
-            </p>
-          </div>
+          <img
+            src="../assets/ProjectThumbnails/delicious-foods-monitor.png"
+            alt=""
+          />
 
-          <img src="../assets/ProjectThumbnails/delicious-foods.png" alt="" />
+          <h3>Delicious Foods</h3>
+          <p>
+            A place to find Delicious recipes ranging from Dessert to Starter
+          </p>
         </li>
         <!-- Weather app -->
         <li :class="store.modeClass" class="project-item">
-          <div class="project-item-info">
-            <h3>Weather App</h3>
-            <p>
-              Provides users with accurate weather information, forecasts, and
-              other weather-related data
-            </p>
-          </div>
+          <img
+            src="../assets/ProjectThumbnails/weather-app-monitor.png"
+            alt=""
+          />
 
-          <img src="../assets/ProjectThumbnails/weather-app.png" alt="" />
+          <h3>Weather App</h3>
+          <p>
+            Provides users with accurate weather information, forecasts, and
+            other weather-related data
+          </p>
         </li>
       </ul>
     </div>
@@ -63,7 +62,7 @@ const store = useStore();
 <style scoped>
 #projects {
   scroll-margin: 68.69px;
-  padding: 60px 30px;
+  padding: 60px 0;
   transition: background-color 250ms ease;
 }
 
@@ -84,6 +83,7 @@ const store = useStore();
 
 #projects #intro {
   text-align: center;
+  padding: 0 30px;
 }
 
 #projects-container {
@@ -92,36 +92,29 @@ const store = useStore();
 
 /* Item styles */
 .project-item {
-  display: grid;
-  grid-template-columns: 1fr;
-
   list-style: none;
-  margin: 60px auto;
-  border-radius: 15px;
+  margin: 30px auto;
   max-width: 1250px;
 
   overflow: hidden;
-  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
-  transition: background-color 250ms ease, box-shadow 250ms ease;
-}
-.project-item:hover {
-  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.4);
+
+  transition: background-color 250ms ease;
 }
 
-.project-item-info {
-  padding: 15px;
-}
-
-.project-item-info h3 {
+.project-item h3 {
   margin-bottom: 5px;
+  text-align: center;
   font-size: 1.5rem;
 }
 
-.project-item-info p {
+.project-item p {
+  padding: 0 30px;
+  text-align: center;
   font-size: 1rem;
 }
 
 .project-item img {
+  display: block;
   width: 100%;
 }
 
@@ -146,11 +139,11 @@ const store = useStore();
   }
 
   /* Item styles */
-  .project-item {
+  /* .project-item {
     grid-template-columns: 1fr 2fr;
-  }
+  } */
 
-  .project-item-info h3 {
+  .project-item h3 {
     font-size: 2rem;
   }
 }
