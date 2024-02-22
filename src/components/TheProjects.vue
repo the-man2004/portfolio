@@ -1,5 +1,5 @@
 <template>
-  <section id="projects" :class="store.modeClass">
+  <section id="projects" :class="store.grayClass">
     <div>
       <h2>PROJECTS</h2>
       <p id="intro">
@@ -9,7 +9,7 @@
     <div id="projects-container">
       <ul>
         <!-- Free-2-Play -->
-        <li :class="store.modeClass" class="project-item">
+        <li class="project-item">
           <img
             src="../assets/ProjectThumbnails/free-2-play-monitor.png"
             alt=""
@@ -18,13 +18,13 @@
           <p>Information about free to play PC and Browser games</p>
         </li>
         <!-- Sudoki -->
-        <li :class="store.modeClass" class="project-item">
+        <li class="project-item">
           <img src="../assets/ProjectThumbnails/sudoki-monitor.png" alt="" />
           <h3>Sudoki</h3>
           <p>A puzzle game based on the classic Japanese game Sudoku</p>
         </li>
         <!-- Delicious foods -->
-        <li :class="store.modeClass" class="project-item">
+        <li class="project-item">
           <img
             src="../assets/ProjectThumbnails/delicious-foods-monitor.png"
             alt=""
@@ -36,7 +36,7 @@
           </p>
         </li>
         <!-- Weather app -->
-        <li :class="store.modeClass" class="project-item">
+        <li class="project-item">
           <img
             src="../assets/ProjectThumbnails/weather-app-monitor.png"
             alt=""
