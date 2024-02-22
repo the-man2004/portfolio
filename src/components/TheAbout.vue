@@ -24,7 +24,7 @@
       </div>
       <div id="skills">
         <h3>My Skills & tools</h3>
-        <ul :class="store.skillsClass">
+        <ul :class="store.grayClass">
           <li>JAVASCRIPT</li>
           <li>HTML</li>
           <li>TAILWINDCSS</li>

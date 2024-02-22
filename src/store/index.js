@@ -3,8 +3,25 @@ import { defineStore } from "pinia";
 export const useStore = defineStore("portfolioStore", {
   state: () => {
     return {
-      hello: "Hey!",
       mode: "light",
+      prjects: [
+        {
+          title: "Free-2-Play",
+          imgPath: "../../assets/ProjectThumbnails/free-2-play.png",
+        },
+        {
+          title: "Sudoki",
+          imgPath: "../../assets/ProjectThumbnails/sudoki.png",
+        },
+        {
+          title: "Delicious Foods",
+          imgPath: "../../assets/ProjectThumbnails/delicious-foods.png",
+        },
+        {
+          title: "Weather App",
+          imgPath: "../../assets/ProjectThumbnails/weather-app.png",
+        },
+      ],
     };
   },
   getters: {
@@ -16,7 +33,7 @@ export const useStore = defineStore("portfolioStore", {
       state.mode === "dark" ? { "dark-btn": true } : { "light-btn": true },
     heroClass: (state) =>
       state.mode === "dark" ? { "dark-hero": true } : { "light-hero": true },
-    skillsClass: (state) =>
+    grayClass: (state) =>
       state.mode === "dark" ? { "dark-skill": true } : { "light-skill": true },
   },
   actions: {

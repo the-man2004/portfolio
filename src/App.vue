@@ -2,14 +2,14 @@
   <TheHeader></TheHeader>
   <TheHero></TheHero>
   <TheAbout></TheAbout>
-  <div class="test"></div>
-  <div id="contact" class="test-2">scroll to me</div>
+  <TheProjects></TheProjects>
 </template>
 
 <script setup>
 import TheHeader from "./components/TheHeader.vue";
 import TheHero from "./components/TheHero.vue";
 import TheAbout from "./components/TheAbout.vue";
+import TheProjects from "./components/TheProjects.vue";
 </script>
 
 <style>
@@ -48,16 +48,5 @@ html {
 .dark-mode {
   color: var(--light-color);
   background: var(--dark-color);
-}
-
-/* Test div */
-.test {
-  height: 200vh;
-  background: gray;
-}
-
-.test-2 {
-  height: 100vh;
-  background: gray;
 }
 </style>
