@@ -24,19 +24,21 @@
       </div>
       <div id="skills">
         <h3>My Skills & tools</h3>
-        <ul :class="store.grayClass">
-          <li>JAVASCRIPT</li>
-          <li>HTML</li>
-          <li>TAILWINDCSS</li>
-          <li>CSS</li>
-          <li>VUE</li>
-          <li>PINIA</li>
-          <li>VSCODE</li>
-          <li>TERMINAL</li>
-          <li>GIT</li>
-          <li>GITHUB</li>
-          <li>NPM</li>
-        </ul>
+        <SkillsList
+          :skills="[
+            'JAVASCRIPT',
+            'HTML',
+            'TAILWINDCSS',
+            'CSS',
+            'VUE',
+            'PINIA',
+            'VSCODE',
+            'TERMINAL',
+            'GIT',
+            'GITHUB',
+            'NPM',
+          ]"
+        ></SkillsList>
       </div>
     </div>
   </section>
@@ -45,6 +47,7 @@
 <script setup>
 import { useStore } from "@/store";
 import NavigationBtn from "./HelperComponents/NavigationBtn.vue";
+import SkillsList from "./HelperComponents/SkillsList.vue";
 
 const store = useStore();
 </script>
@@ -117,29 +120,6 @@ const store = useStore();
 #contact-link:focus {
   box-shadow: 1px 1px 15px var(--dark-color);
   transform: translateY(-2.5px);
-}
-
-#skills ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-#skills li {
-  padding: 10px 30px;
-  border-radius: 100px;
-  list-style: none;
-  text-align: center;
-  transition: background-color 250ms ease;
-}
-
-/* Mode styles */
-.dark-skill li {
-  background: var(--dark-gray-color);
-}
-
-.light-skill li {
-  background: var(--light-gray-color);
 }
 
 @media (min-width: 750px) {

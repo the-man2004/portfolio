@@ -14,9 +14,19 @@
             src="../assets/ProjectThumbnails/free-2-play-monitor.png"
             alt=""
           />
-          <div :class="store.modeClass">
+          <div class="project-item-info" :class="store.modeClass">
             <h3>Free-2-Play</h3>
             <p>Information about free to play PC and Browser games</p>
+            <SkillsList
+              :skills="[
+                'JAVASCRIPT',
+                'TAILWINDCSS',
+                'VUE',
+                'PINIA',
+                'GIT',
+                'GITHUB',
+              ]"
+            ></SkillsList>
             <NavigationBtn link="https://free-2-play.netlify.app"
               >CHECK IT OUT</NavigationBtn
             >
@@ -25,9 +35,12 @@
         <!-- Sudoki -->
         <li class="project-item">
           <img src="../assets/ProjectThumbnails/sudoki-monitor.png" alt="" />
-          <div :class="store.modeClass">
+          <div class="project-item-info" :class="store.modeClass">
             <h3>Sudoki</h3>
             <p>A puzzle game based on the classic Japanese game Sudoku</p>
+            <SkillsList
+              :skills="['JAVASCRIPT', 'CSS', 'VUE', 'PINIA', 'GIT', 'GITHUB']"
+            ></SkillsList>
             <NavigationBtn link="https://sudoki.netlify.app"
               >CHECK IT OUT</NavigationBtn
             >
@@ -39,11 +52,14 @@
             src="../assets/ProjectThumbnails/delicious-foods-monitor.png"
             alt=""
           />
-          <div :class="store.modeClass">
+          <div class="project-item-info" :class="store.modeClass">
             <h3>Delicious Foods</h3>
             <p>
               A place to find Delicious recipes ranging from Dessert to Starter
             </p>
+            <SkillsList
+              :skills="['JAVASCRIPT', 'CSS', 'VUE', 'PINIA', 'GIT', 'GITHUB']"
+            ></SkillsList>
             <NavigationBtn link="https://delicious-foods-app.netlify.app"
               >CHECK IT OUT</NavigationBtn
             >
@@ -55,12 +71,22 @@
             src="../assets/ProjectThumbnails/weather-app-monitor.png"
             alt=""
           />
-          <div :class="store.modeClass">
+          <div class="project-item-info" :class="store.modeClass">
             <h3>Weather App</h3>
             <p>
               Provides users with accurate weather information, forecasts, and
               other weather-related data
             </p>
+            <SkillsList
+              :skills="[
+                'JAVASCRIPT',
+                'TAILWINDCSS',
+                'VUE',
+                'PINIA',
+                'GIT',
+                'GITHUB',
+              ]"
+            ></SkillsList>
             <NavigationBtn link="https://weather-app-heinrich.netlify.app"
               >CHECK IT OUT</NavigationBtn
             >
@@ -74,6 +100,7 @@
 <script setup>
 import { useStore } from "@/store";
 import NavigationBtn from "./HelperComponents/NavigationBtn.vue";
+import SkillsList from "./HelperComponents/SkillsList.vue";
 
 const store = useStore();
 </script>
@@ -121,33 +148,33 @@ const store = useStore();
   transition: background-color 250ms ease;
 }
 
-.project-item h3 {
-  text-align: center;
-  margin-bottom: 5px;
-  font-size: 1.5rem;
-}
-
-.project-item p {
-  text-align: center;
-  margin: 15px 0 30px 0;
-  max-width: 750px;
-  font-size: 1rem;
-}
-
 .project-item img {
   display: block;
   width: 100%;
 }
 
-.project-item div {
+.project-item-info {
   padding: 30px;
   margin: 0 30px;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
+  gap: 20px;
   border-radius: 30px;
 
   transition: background-color 250ms ease;
+}
+
+.project-item-info h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.project-item-info p {
+  text-align: center;
+  max-width: 750px;
+  font-size: 1rem;
 }
 
 /* Mode styles */
@@ -171,8 +198,12 @@ const store = useStore();
   }
 
   /* Item styles */
-  .project-item h3 {
+  .project-item-info h3 {
     font-size: 2.5rem;
+  }
+
+  .project-item-info {
+    gap: 30px;
   }
 }
 </style>
