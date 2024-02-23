@@ -16,7 +16,10 @@
           />
           <div class="project-item-info" :class="store.modeClass">
             <h3>Free-2-Play</h3>
-            <p>Information about free to play PC and Browser games</p>
+            <p>
+              Provides users with information about free to play PC and Browser
+              games
+            </p>
             <SkillsList
               :skills="[
                 'JAVASCRIPT',
@@ -55,7 +58,8 @@
           <div class="project-item-info" :class="store.modeClass">
             <h3>Delicious Foods</h3>
             <p>
-              A place to find Delicious recipes ranging from Dessert to Starter
+              A place to find new and interesting Delicious recipes ranging from
+              Dessert to Starter
             </p>
             <SkillsList
               :skills="['JAVASCRIPT', 'CSS', 'VUE', 'PINIA', 'GIT', 'GITHUB']"
