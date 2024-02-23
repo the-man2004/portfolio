@@ -10,6 +10,7 @@ const props = defineProps(["link"]);
 
 <style scoped>
 a {
+  display: inline-block;
   padding: 5px 15px;
   text-decoration: none;
   font-size: 1rem;
