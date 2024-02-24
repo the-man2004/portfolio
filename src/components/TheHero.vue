@@ -99,6 +99,7 @@ const store = useStore();
   content: "";
   position: absolute;
   inset: 0;
+  min-height: 650px;
   z-index: 1;
 
   transition: background-color 250ms ease;
