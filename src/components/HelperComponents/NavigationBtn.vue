@@ -1,11 +1,11 @@
 <template>
-  <a :href="props.link"><slot></slot></a>
+  <a :href="props.link" :target="props.target"><slot></slot></a>
 </template>
 
 <script setup>
 import { defineProps } from "vue";
 
-const props = defineProps(["link"]);
+const props = defineProps(["link", "target"]);
 </script>
 
 <style scoped>

@@ -7,7 +7,9 @@
         {{ props.description }}
       </p>
       <SkillsList :skills="props.skills"></SkillsList>
-      <NavigationBtn :link="props.link">CHECK IT OUT</NavigationBtn>
+      <NavigationBtn :link="props.link" target="_blank"
+        >CHECK IT OUT</NavigationBtn
+      >
     </div>
   </li>
 </template>
