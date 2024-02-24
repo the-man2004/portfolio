@@ -23,7 +23,7 @@ a {
 }
 a:hover,
 a:focus {
-  box-shadow: 1px 1px 15px var(--dark-color);
+  box-shadow: 1px 1px 15px var(--accent-color);
   transform: translateY(-5px);
 }
 
