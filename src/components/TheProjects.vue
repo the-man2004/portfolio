@@ -9,93 +9,64 @@
     <div id="projects-container">
       <ul>
         <!-- Free-2-Play -->
-        <li class="project-item">
+        <ProjectItem
+          title="Free-2-Play"
+          description="Provides users with information about free to play PC and Browser games"
+          link="https://free-2-play.netlify.app"
+          :skills="[
+            'JAVASCRIPT',
+            'TAILWINDCSS',
+            'VUE',
+            'PINIA',
+            'GIT',
+            'GITHUB',
+          ]"
+        >
           <img
             src="../assets/ProjectThumbnails/free-2-play-monitor.png"
             alt=""
           />
-          <div class="project-item-info" :class="store.modeClass">
-            <h3>Free-2-Play</h3>
-            <p>
-              Provides users with information about free to play PC and Browser
-              games
-            </p>
-            <SkillsList
-              :skills="[
-                'JAVASCRIPT',
-                'TAILWINDCSS',
-                'VUE',
-                'PINIA',
-                'GIT',
-                'GITHUB',
-              ]"
-            ></SkillsList>
-            <NavigationBtn link="https://free-2-play.netlify.app"
-              >CHECK IT OUT</NavigationBtn
-            >
-          </div>
-        </li>
+        </ProjectItem>
         <!-- Sudoki -->
-        <li class="project-item">
+        <ProjectItem
+          title="Sudoki"
+          description="A puzzle game based on the classic Japanese game Sudoku"
+          link="https://sudoki.netlify.app"
+          :skills="['JAVASCRIPT', 'CSS', 'VUE', 'PINIA', 'GIT', 'GITHUB']"
+        >
           <img src="../assets/ProjectThumbnails/sudoki-monitor.png" alt="" />
-          <div class="project-item-info" :class="store.modeClass">
-            <h3>Sudoki</h3>
-            <p>A puzzle game based on the classic Japanese game Sudoku</p>
-            <SkillsList
-              :skills="['JAVASCRIPT', 'CSS', 'VUE', 'PINIA', 'GIT', 'GITHUB']"
-            ></SkillsList>
-            <NavigationBtn link="https://sudoki.netlify.app"
-              >CHECK IT OUT</NavigationBtn
-            >
-          </div>
-        </li>
+        </ProjectItem>
         <!-- Delicious foods -->
-        <li class="project-item">
+        <ProjectItem
+          title="Delicious Foods"
+          description="A place to find new and interesting Delicious recipes ranging from Dessert to Starter"
+          link="https://delicious-foods-app.netlify.app"
+          :skills="['JAVASCRIPT', 'CSS', 'VUE', 'PINIA', 'GIT', 'GITHUB']"
+        >
           <img
             src="../assets/ProjectThumbnails/delicious-foods-monitor.png"
             alt=""
           />
-          <div class="project-item-info" :class="store.modeClass">
-            <h3>Delicious Foods</h3>
-            <p>
-              A place to find new and interesting Delicious recipes ranging from
-              Dessert to Starter
-            </p>
-            <SkillsList
-              :skills="['JAVASCRIPT', 'CSS', 'VUE', 'PINIA', 'GIT', 'GITHUB']"
-            ></SkillsList>
-            <NavigationBtn link="https://delicious-foods-app.netlify.app"
-              >CHECK IT OUT</NavigationBtn
-            >
-          </div>
-        </li>
+        </ProjectItem>
         <!-- Weather app -->
-        <li class="project-item">
+        <ProjectItem
+          title="Weather App"
+          description="Provides users with accurate weather information, forecasts, and other weather-related data"
+          link="https://weather-app-heinrich.netlify.app"
+          :skills="[
+            'JAVASCRIPT',
+            'TAILWINDCSS',
+            'VUE',
+            'PINIA',
+            'GIT',
+            'GITHUB',
+          ]"
+        >
           <img
             src="../assets/ProjectThumbnails/weather-app-monitor.png"
             alt=""
           />
-          <div class="project-item-info" :class="store.modeClass">
-            <h3>Weather App</h3>
-            <p>
-              Provides users with accurate weather information, forecasts, and
-              other weather-related data
-            </p>
-            <SkillsList
-              :skills="[
-                'JAVASCRIPT',
-                'TAILWINDCSS',
-                'VUE',
-                'PINIA',
-                'GIT',
-                'GITHUB',
-              ]"
-            ></SkillsList>
-            <NavigationBtn link="https://weather-app-heinrich.netlify.app"
-              >CHECK IT OUT</NavigationBtn
-            >
-          </div>
-        </li>
+        </ProjectItem>
       </ul>
     </div>
   </section>
@@ -103,8 +74,7 @@
 
 <script setup>
 import { useStore } from "@/store";
-import NavigationBtn from "./HelperComponents/NavigationBtn.vue";
-import SkillsList from "./HelperComponents/SkillsList.vue";
+import ProjectItem from "./Projects/ProjectItem.vue";
 
 const store = useStore();
 </script>
@@ -140,45 +110,9 @@ const store = useStore();
   margin-top: 60px;
 }
 
-/* Item styles */
-.project-item {
-  list-style: none;
-  margin: 30px auto;
-  padding-bottom: 30px;
-  max-width: 1250px;
-
-  overflow: hidden;
-
-  transition: background-color 250ms ease;
-}
-
-.project-item img {
+#projects-container img {
   display: block;
   width: 100%;
-}
-
-.project-item-info {
-  padding: 30px;
-  margin: 0 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
-  border-radius: 30px;
-
-  transition: background-color 250ms ease;
-}
-
-.project-item-info h3 {
-  text-align: center;
-  font-size: 1.5rem;
-}
-
-.project-item-info p {
-  text-align: center;
-  max-width: 750px;
-  font-size: 1rem;
 }
 
 /* Mode styles */
@@ -199,15 +133,6 @@ const store = useStore();
 
   #projects p {
     font-size: 1.5rem;
-  }
-
-  /* Item styles */
-  .project-item-info h3 {
-    font-size: 2.5rem;
-  }
-
-  .project-item-info {
-    gap: 30px;
   }
 }
 </style>
