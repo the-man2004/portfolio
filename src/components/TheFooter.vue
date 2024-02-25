@@ -74,6 +74,8 @@ footer a {
 #info img {
   width: 30px;
   margin-right: 15px;
+  /* border-radius: 100px; */
+  /* background: white; */
 }
 
 #info > div:nth-child(1) {
