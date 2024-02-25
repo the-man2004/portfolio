@@ -4,6 +4,7 @@
   <TheAbout></TheAbout>
   <TheProjects></TheProjects>
   <TheContact></TheContact>
+  <TheFooter></TheFooter>
 </template>
 
 <script setup>
@@ -12,6 +13,7 @@ import TheHero from "./components/TheHero.vue";
 import TheAbout from "./components/TheAbout.vue";
 import TheProjects from "./components/TheProjects.vue";
 import TheContact from "./components/TheContact.vue";
+import TheFooter from "./components/TheFooter.vue";
 </script>
 
 <style>
