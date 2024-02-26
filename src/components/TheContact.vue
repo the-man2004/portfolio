@@ -1,9 +1,9 @@
 <template>
   <section id="contact" :class="store.modeClass">
     <div>
-      <h2>CONTACT</h2>
+      <h2>CONTACT ME</h2>
       <p id="intro">
-        If you are interested in offering me a job opertunity then feel free to
+        If you are interested in offering me a job opportunity then feel free to
         contact me
       </p>
     </div>
