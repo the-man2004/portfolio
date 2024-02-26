@@ -54,7 +54,6 @@ const store = useStore();
 #about {
   scroll-margin: 68.69px;
   padding: 60px 30px;
-  /* min-height: calc(100vh - 68.69px); */
 
   transition: background-color 250ms ease;
 }
@@ -80,7 +79,7 @@ const store = useStore();
 
 /* About me and skills styles */
 #about-and-skills {
-  margin: 60px auto 0 auto;
+  margin: 30px auto 0 auto;
   max-width: 1250px;
 }
 
@@ -154,6 +153,7 @@ const store = useStore();
 
   /* About me and skills styles */
   #about-and-skills {
+    margin: 60px auto 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
