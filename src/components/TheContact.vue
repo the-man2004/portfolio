@@ -85,7 +85,7 @@ const store = useStore();
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 60px 0;
+  margin: 15px 0 60px 0;
 }
 
 #form-container form {
@@ -154,6 +154,10 @@ const store = useStore();
 
   #contact p {
     font-size: 1.5rem;
+  }
+
+  #form-container {
+    margin: 30px 0 60px 0;
   }
 
   #form-container label {
