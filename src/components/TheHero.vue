@@ -23,11 +23,13 @@ const store = useStore();
 
 <style scoped>
 #hero {
+  margin-top: 68.69px;
+  scroll-margin: 68.69px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100vh - 68.69px);
   min-height: 650px;
 
   background-image: url("../assets/marble.jpg");
@@ -97,8 +99,10 @@ const store = useStore();
 .dark-hero::after,
 .light-hero::after {
   content: "";
+  margin-top: 68.69px;
   position: absolute;
   inset: 0;
+  height: calc(100vh - 68.69px);
   min-height: 650px;
   z-index: 1;
 
