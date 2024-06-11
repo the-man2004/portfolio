@@ -32,7 +32,7 @@ const store = useStore();
   height: calc(100vh - 68.69px);
   min-height: 650px;
 
-  background-image: url("../assets/marble.jpg");
+  background-image: url("../assets/marble.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

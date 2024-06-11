@@ -30,6 +30,7 @@
             'HTML',
             'TAILWINDCSS',
             'CSS',
+            'REACT',
             'VUE',
             'PINIA',
             'VSCODE',
